@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Navigation Sample</string>
+
+    <string name="rent_a_boat">Rent-A-Boat</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="full_name">Full Name</string>
+</resources>
