@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrationFragment">
+    tools:context=".features.wolcome_screen.registration_screen.RegistrationFragment">
 
 
     <com.google.android.material.textfield.TextInputEditText
@@ -39,10 +39,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#3F51B5"
+        android:background="@color/colorPrimary"
         android:text="@string/register"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textInputEditText3"
