@@ -6,7 +6,7 @@ import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
+import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import khalid.elnagar.navigationsample.entities.Boat
 import java.lang.Thread.sleep
@@ -14,7 +14,7 @@ import java.lang.Thread.sleep
 class FeedViewModel : ViewModel() {
     private val bootsLiveData =
         MutableLiveData<MutableList<Boat>>().apply { value = mutableListOf() }
-    private lateinit var disposable: Disposable
+    private val disposable: CompositeDisposable = CompositeDisposable()
 
     private val boatsObservable: Observable<Boat> by lazy {
         Observable
@@ -49,9 +49,9 @@ class FeedViewModel : ViewModel() {
     fun startLoading() {
         with(bootsLiveData) {
             if (value.isNullOrEmpty())
-                disposable = boatsObservable.subscribe { boat ->
+                disposable.add(boatsObservable.subscribe { boat ->
                     value = value?.also { it.add(boat) }
-                }
+                })
         }
     }
 
@@ -60,5 +60,8 @@ class FeedViewModel : ViewModel() {
         disposable.dispose()
     }
 
-    fun findBoat(index: Int): Boat? = bootsLiveData.value?.getOrNull(index)
+    fun findBoat(index: Int): Boat =
+        bootsLiveData.value?.getOrNull(index) ?: Boat("khalid", "Egypt", "200 $")
+
+
 }
