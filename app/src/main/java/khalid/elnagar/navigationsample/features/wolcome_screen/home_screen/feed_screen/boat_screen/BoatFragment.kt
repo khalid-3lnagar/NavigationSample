@@ -26,14 +26,19 @@ class BoatFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? = inflater.inflate(R.layout.fragment_boat, container, false)
         .apply {
-            val index = BoatFragmentArgs.fromBundle(arguments!!).index
+
+            val index = arguments?.getString("index_dl")?.toInt()
+                ?: BoatFragmentArgs.fromBundle(arguments!!).index
+
             Log.d(this.javaClass.simpleName, "index is $index")
-            val boat = model.findBoat(index)
-            boat?.apply {
-                txt_name.text = name
-                txt_location.text = location
-                txt_price.text = price
-            }
+
+            model
+                .findBoat(index)
+                .apply {
+                    txt_name.text = name
+                    txt_location.text = location
+                    txt_price.text = price
+                }
 
         }
 

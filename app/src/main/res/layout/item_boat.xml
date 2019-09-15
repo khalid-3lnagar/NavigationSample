@@ -17,6 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/boat"
         app:srcCompat="@drawable/speed_boat_blue" />
 
     <TextView
@@ -26,7 +27,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Name"
+        android:text="@string/name"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#030303"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +39,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="location"
+        android:text="@string/location"
         app:layout_constraintEnd_toEndOf="@+id/txt_name"
         app:layout_constraintStart_toStartOf="@+id/txt_name"
         app:layout_constraintTop_toBottomOf="@+id/txt_name" />
@@ -49,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="serif"
-        android:text="100 EUR"
+        android:text="@string/price_default"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#23DF25"

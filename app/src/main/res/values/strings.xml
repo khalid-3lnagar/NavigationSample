@@ -9,4 +9,11 @@
     <string name="full_name">Full Name</string>
 
     <string name="hello_blank_fragment">Hello Order fragment</string>
+    <string name="boat">Boat</string>
+    <string name="price_default">100 EUR</string>
+    <string name="rent_now">Rent Now!</string>
+    <string name="name">Name</string>
+    <string name="location">Location</string>
+    <string name="feed">Feed</string>
+    <string name="orders">Orders</string>
 </resources>
