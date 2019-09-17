@@ -1,4 +1,4 @@
-package khalid.elnagar.navigationsample.features.wolcome_screen.home_screen
+package khalid.elnagar.navigationsample.features.home
 
 
 import android.os.Bundle
@@ -11,9 +11,6 @@ import androidx.navigation.ui.setupWithNavController
 import khalid.elnagar.navigationsample.R
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
-/**
- * A simple [Fragment] subclass.
- */
 class HomeFragment : Fragment() {
 
     override fun onCreateView(
@@ -30,10 +27,11 @@ class HomeFragment : Fragment() {
             bottom_nav_view.setupWithNavController(navController)
 
 
-            navController.addOnDestinationChangedListener { _, destination, _ ->
-                toolbar.title = destination.label
+            navController
+                .addOnDestinationChangedListener { _, destination, _ ->
+                    toolbar.title = destination.label
 
-            }
+                }
 
 
         }

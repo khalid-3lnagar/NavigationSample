@@ -1,4 +1,4 @@
-package khalid.elnagar.navigationsample.features.wolcome_screen.home_screen.feed_screen
+package khalid.elnagar.navigationsample.features.feed
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -17,6 +17,7 @@ class FeedViewModel : ViewModel() {
     private val disposable: CompositeDisposable = CompositeDisposable()
 
     private val boatsObservable: Observable<Boat> by lazy {
+
         Observable
             .create<Boat> { emitter ->
                 //make fake data
@@ -60,7 +61,7 @@ class FeedViewModel : ViewModel() {
         disposable.dispose()
     }
 
-    fun findBoat(index: Int): Boat =
+    fun findBoat(index: Int): Boat = //dummy business logic
         bootsLiveData.value?.getOrNull(index) ?: Boat("khalid", "Egypt", "200 $")
 
 

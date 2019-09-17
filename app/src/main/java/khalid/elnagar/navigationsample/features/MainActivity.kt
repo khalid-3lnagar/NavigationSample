@@ -9,7 +9,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavDeepLinkBuilder
 import khalid.elnagar.navigationsample.R
-import khalid.elnagar.navigationsample.features.wolcome_screen.home_screen.feed_screen.boat_screen.BoatFragmentArgs
+import khalid.elnagar.navigationsample.features.boat.BoatFragmentArgs
 
 class MainActivity : AppCompatActivity() {
 

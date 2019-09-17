@@ -1,4 +1,4 @@
-package khalid.elnagar.navigationsample.features.wolcome_screen.home_screen.feed_screen
+package khalid.elnagar.navigationsample.features.feed
 
 
 import android.os.Bundle
@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import khalid.elnagar.navigationsample.R
-import khalid.elnagar.navigationsample.features.wolcome_screen.home_screen.HomeFragmentDirections
+import khalid.elnagar.navigationsample.features.home.HomeFragmentDirections
 import kotlinx.android.synthetic.main.fragment_feed.view.*
 
 /**
@@ -35,6 +35,11 @@ class FeedFragment : Fragment() {
         }
 
     private fun onBoatClicked(boatIndex: Int) {
+        //un safe arguments
+        //val args = Bundle().apply { putInt("index", position) }
+        //findNavController().navigate(R.id.boatFragment, args)
+
+        //save arguments
         val action = HomeFragmentDirections.actionHomeFragmentToBoatFragment(boatIndex)
         activity?.findNavController(R.id.nav_container)?.navigate(action)
     }

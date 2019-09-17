@@ -1,4 +1,4 @@
-package khalid.elnagar.navigationsample.features.wolcome_screen.home_screen.feed_screen
+package khalid.elnagar.navigationsample.features.feed
 
 import android.view.LayoutInflater
 import android.view.View
@@ -31,10 +31,6 @@ class BoatAdapter(
             txt_name.text = boat.name
             txt_location.text = boat.location
             txt_price.text = boat.price
-//              un safe arguments
-//            val args = Bundle().apply { putInt("index", position) }
-//            findNavController().navigate(R.id.boatFragment, args)
-
             setOnClickListener { onBoatClicked(position) }
         }
 

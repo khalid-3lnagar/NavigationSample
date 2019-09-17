@@ -1,4 +1,4 @@
-package khalid.elnagar.navigationsample.features.wolcome_screen
+package khalid.elnagar.navigationsample.features.wolcome
 
 
 import android.os.Bundle
@@ -11,9 +11,6 @@ import androidx.navigation.fragment.findNavController
 import khalid.elnagar.navigationsample.R
 import kotlinx.android.synthetic.main.fragment_welcome.view.*
 
-/**
- * A simple [Fragment] subclass.
- */
 class WelcomeFragment : Fragment() {
 
     override fun onCreateView(
@@ -22,17 +19,21 @@ class WelcomeFragment : Fragment() {
     ): View? = inflater.inflate(R.layout.fragment_welcome, container, false)
         .apply {
 
-            btn_login.setOnClickListener {
-                val email = etxt_email.text.toString()
-                val password = etxt_password.text.toString()
-
-                if (email.isNotEmpty() && password.isNotEmpty())
-                    findNavController().navigate(R.id.action_welcomeFragment_to_homeFragment)
-            }
-
+            //first way to handle navigation
             Navigation
                 .createNavigateOnClickListener(R.id.action_welcomeFragment_to_registrationFragment)
                 .also(btn_register::setOnClickListener)
+
+            //another way to do navigation with findNavController
+            btn_login.setOnClickListener {
+
+                val email = etxt_email.text.toString()
+                val password = etxt_password.text.toString()
+                val fakeValidation = email.isNotEmpty() && password.isNotEmpty()
+
+                if (fakeValidation) findNavController().navigate(R.id.action_welcomeFragment_to_homeFragment)
+
+            }
         }
 
 

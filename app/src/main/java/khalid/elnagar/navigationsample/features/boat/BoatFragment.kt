@@ -1,4 +1,4 @@
-package khalid.elnagar.navigationsample.features.wolcome_screen.home_screen.feed_screen.boat_screen
+package khalid.elnagar.navigationsample.features.boat
 
 
 import android.os.Bundle
@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import khalid.elnagar.navigationsample.R
-import khalid.elnagar.navigationsample.features.wolcome_screen.home_screen.feed_screen.FeedViewModel
+import khalid.elnagar.navigationsample.features.feed.FeedViewModel
 import kotlinx.android.synthetic.main.fragment_boat.view.*
 
 /**

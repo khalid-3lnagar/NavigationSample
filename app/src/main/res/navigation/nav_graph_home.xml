@@ -7,12 +7,12 @@
     app:startDestination="@id/feedFragment">
     <fragment
         android:id="@+id/feedFragment"
-        android:name="khalid.elnagar.navigationsample.features.wolcome_screen.home_screen.feed_screen.FeedFragment"
+        android:name="khalid.elnagar.navigationsample.features.feed.FeedFragment"
         android:label="Feed"
         tools:layout="@layout/fragment_feed" />
     <fragment
         android:id="@+id/ordersFragment"
-        android:name="khalid.elnagar.navigationsample.features.wolcome_screen.home_screen.orders_screen.OrdersFragment"
+        android:name="khalid.elnagar.navigationsample.features.orders.OrdersFragment"
         android:label="Orders"
         tools:layout="@layout/fragment_orders" />
 </navigation>

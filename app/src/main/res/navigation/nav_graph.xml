@@ -6,7 +6,7 @@
     app:startDestination="@id/welcomeFragment">
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="khalid.elnagar.navigationsample.features.wolcome_screen.WelcomeFragment"
+        android:name="khalid.elnagar.navigationsample.features.wolcome.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome">
         <action
@@ -28,12 +28,12 @@
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="khalid.elnagar.navigationsample.features.wolcome_screen.registration_screen.RegistrationFragment"
+        android:name="khalid.elnagar.navigationsample.features.registration.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="khalid.elnagar.navigationsample.features.wolcome_screen.home_screen.HomeFragment"
+        android:name="khalid.elnagar.navigationsample.features.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/boatFragment"
-        android:name="khalid.elnagar.navigationsample.features.wolcome_screen.home_screen.feed_screen.boat_screen.BoatFragment"
+        android:name="khalid.elnagar.navigationsample.features.boat.BoatFragment"
         android:label="fragment_boat"
         tools:layout="@layout/fragment_boat">
         <argument
